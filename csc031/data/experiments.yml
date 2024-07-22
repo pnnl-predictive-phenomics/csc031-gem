@@ -3,7 +3,7 @@ medium:
   path: "media/"
   definitions:
    whole_medium_no_carbon:
-    filename: "csc031_C-less_media.csv"
+    filename: "csc031C-less_media.csv"
     label: "All medium metabolites except the ones with Carbon"
    min_media_no_carbon:
     filename: "min_medium_csc031C-less_media.csv"
