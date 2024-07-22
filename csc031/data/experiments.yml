@@ -15,6 +15,6 @@ growth:
   experiments:
     biolog_carbon:
       medium: "no_carbon"
-        filename: "biolog_carbon_microbacterium.csv"
-        label: "no_carbon data"
+      filename: "biolog_carbon_microbacterium.csv"
+      label: "no_carbon data"
 minimal_growth_rate: 0.05
