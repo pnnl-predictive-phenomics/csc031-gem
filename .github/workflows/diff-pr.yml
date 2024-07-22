@@ -3,11 +3,15 @@ name: memote-diff
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   diff:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
 
     steps:
     - uses: actions/checkout@v2
