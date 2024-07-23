@@ -33,10 +33,13 @@ git checkout "${deployment}"
 echo "Generating updated history report '${output}'."
 memote report history --filename="${output}"
 
-# Add, commit and push the files.
-git add "${output}"
-git commit -m "Github actions report # ${GITHUB_SHA}"
-git push --quiet "https://github.com/${GITHUB_REPOSITORY}.git" "${deployment}" > /dev/null
-
-echo "Memote report was generated at https://pnnl-predictive-phenomics/${GITHUB_REPOSITORY}"
-
+# Check if the report file exists
+if [ -f "${output}" ]; then
+  git add "${output}"
+  git commit -m "Github actions report # ${GITHUB_SHA}"
+  git push --quiet "https://github.com/${GITHUB_REPOSITORY}.git" "${deployment}" > /dev/null
+  echo "Memote report was generated at https://pnnl-predictive-phenomics/${GITHUB_REPOSITORY}"
+else
+  echo "Error: Report file not found!"
+  exit 1
+fi
