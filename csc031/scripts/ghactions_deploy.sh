@@ -28,7 +28,7 @@ else
 fi
 
 # Generate the history report on the deployment branch.
-output="results/history_report.html"
+output="./results/history_report.html"
 git checkout "${deployment}"
 echo "Generating updated history report '${output}'."
 memote report history --filename="${output}"
