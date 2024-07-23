@@ -6,6 +6,10 @@
 echo "Parse memote.ini for values."
 deployment=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /deployment/) print $2}' memote.ini | tr -d ' ')
 location=$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /location/) print $2}' memote.ini | tr -d ' ')
+echo "Deployment '${deployment}'"
+echo "Location '${location}'"
+echo "repository '${GITHUB_REPOSITORY}'"
+
 
 git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git config --global user.name "${GITHUB_ACTOR}"
@@ -28,7 +32,7 @@ else
 fi
 
 # Generate the history report on the deployment branch.
-output="./results/history_report.html"
+output="history_report.html"
 git checkout "${deployment}"
 echo "Generating updated history report '${output}'."
 memote report history --filename="${output}"
