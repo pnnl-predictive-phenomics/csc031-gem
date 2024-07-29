@@ -41,9 +41,9 @@ memote report snapshot --filename="${snapshot_output}"
 history_output="history_report.html"
 git checkout "${deployment}"
 echo "Generating updated history report '${history_output}'."
-memote report history --filename="${output}"
+memote report history --filename="${history_output}"
 
-git add "${output}"
+git add "${history_output}"
 git add "${snapshot_output}"
 git commit -m "Github actions report ${GITHUB_SHA}"
 git push --quiet "https://github.com/${GITHUB_REPOSITORY}.git" "${deployment}" > /dev/null
