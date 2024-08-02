@@ -22,8 +22,10 @@ if [[ "${GITHUB_EVENT_NAME}" == "pull_request" || "${GITHUB_REPOSITORY}" != "pnn
 else
 		# Always need the deployment branch available locally for storing results.
 		echo "Checking  if deployment branch ${deployment} is available"
+		git stash
 		git checkout "${deployment}"
 		echo "Back to base ${HEAD_REF}"
+		git stash
 		git checkout ${HEAD_REF}
 		echo "Tracked build."
 		mkdir -p results
@@ -33,12 +35,14 @@ fi
 
 # Generate a snapshot report on the deployment branch.
 snapshot_output="snapshot_report.html"
+git stash
 git checkout "${deployment}"
 echo "Generating snapshot report '${snapshot_output}'"
 memote report snapshot --filename="${snapshot_output}"
 
 # Generate the history report on the deployment branch.
 history_output="history_report.html"
+git stash
 git checkout "${deployment}"
 echo "Generating updated history report '${history_output}'."
 memote report history --filename="${history_output}" --experimental "csc031/data/experiments.yml"
