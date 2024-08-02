@@ -35,6 +35,7 @@ fi
 
 # Generate a snapshot report on the deployment branch.
 snapshot_output="snapshot_report.html"
+# Adding git stash
 git stash
 git checkout "${deployment}"
 echo "Generating snapshot report '${snapshot_output}'"
