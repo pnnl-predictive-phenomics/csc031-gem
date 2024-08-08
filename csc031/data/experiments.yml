@@ -10,7 +10,7 @@ medium:
       label: "Minimal media with no carbon"
     rich_media:
       filename: "csc031C-less_mediaRichMedia.csv"
-      label "Rich media"
+      label: "Rich media"
 growth:
   path: "growth/"
   experiments:
