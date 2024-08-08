@@ -20,6 +20,6 @@ growth:
       label: "no_carbon data"
     rich_media_biolog_carbon:
       medium: rich_media
-      filename: "csc031C-less_mediaRichMedia.csv"
+      filename: "biolog_carbon_microbacterium.csv"
       label: "Rich Media Data"
 minimal_growth_rate: 0.05
