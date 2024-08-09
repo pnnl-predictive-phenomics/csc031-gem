@@ -8,8 +8,12 @@ medium:
     min_media_no_carbon:
       filename: "min_medium_csc031C-less_media.csv"
       label: "Minimal media with no carbon"
-essentiality:
-  path: "essentiality/"
+    rich_media:
+      filename: "csc031C-less_mediaRichMedia.csv"
+      label: "Rich media"
+    whole_medium:
+      filename: "whole_minimal_media031.csv"
+      label: "Whole media"
 growth:
   path: "growth/"
   experiments:
@@ -17,4 +21,12 @@ growth:
       medium: min_media_no_carbon
       filename: "biolog_carbon_microbacterium.csv"
       label: "no_carbon data"
+    rich_media_biolog_carbon:
+      medium: rich_media
+      filename: "biolog_carbon_microbacterium.csv"
+      label: "Rich Media Data"
+    whole_media:
+      medium: whole_medium
+      filename: "biolog_carbon_microbacterium.csv"
+      label: "Whole Minimal Media Data"
 minimal_growth_rate: 0.05

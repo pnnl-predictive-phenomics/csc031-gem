@@ -41,7 +41,7 @@ memote report snapshot --filename="${snapshot_output}"
 history_output="history_report.html"
 git checkout "${deployment}"
 echo "Generating updated history report '${history_output}'."
-memote report history --filename="${history_output}"
+memote report history --filename="${history_output}" --experimental "csc031/data/experiments.yml"
 
 git add "${history_output}"
 git add "${snapshot_output}"
