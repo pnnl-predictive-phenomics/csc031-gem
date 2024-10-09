@@ -12,8 +12,8 @@
 conda init
 conda activate /people/anth445/miniconda3/carveme
 
-MODEL="/rcfs/projects/ppi_concerto/best_assemblies/curtobacterium_CSC_009/csc009-gem/csc009/model.xml"
-MEDIADB="/rcfs/projects/ppi_concerto/best_assemblies/curtobacterium_CSC_009/csc009-gem/csc009/data/media/CarveMeMinimalMediaFile.csv"
-OUTPUT="/rcfs/projects/ppi_concerto/best_assemblies/curtobacterium_CSC_009/csc009-gem/csc009/model_gapfilled.xml"
+MODEL="/rcfs/projects/ppi_concerto/best_assemblies/microbacterium_CSC_031/[csc009-gem/csc009]/model.xml"
+MEDIADB="/rcfs/projects/ppi_concerto/best_assemblies/microbacterium_CSC_031/[csc009-gem/csc009/data/media]/CarveMeMinimalMediaFile.csv"
+OUTPUT="/rcfs/projects/ppi_concerto/best_assemblies/microbacterium_CSC_031/[csc009-gem/csc009]/model_gapfilled.xml"
 
 gapfill $MODEL -m BL[dextrin],BL[pectin],BL[acgal],BL[abt__D],BL[arbt],BL[madg],BL[pala],BL[raffin],BL[salcn],BL[stys],BL[xylt],BL[gam],BL[Dara14lac] --mediadb $MEDIADB -o $OUTPUT --fbc2 -v
