@@ -6,8 +6,8 @@ medium:
       filename: "csc031C-less_media.csv"
       label: "All medium metabolites except the ones with Carbon"
     min_media_no_carbon:
-      filename: "min_medium_csc031C-less_media.csv"
-      label: "Minimal media with no carbon"
+      filename: "CarveMeMinimalMediaFile.csv"
+      label: "Carveme Generated Minimal Media"
 essentiality:
   path: "essentiality/"
 growth:
